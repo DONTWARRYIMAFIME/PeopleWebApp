@@ -18,7 +18,7 @@ public class PeopleController {
     private final PersonDAO personDAO;
 
     @Autowired
-    public PeopleController(@Qualifier("postgreSQLDAO") PersonDAO personDAO) {
+    public PeopleController(@Qualifier("jdbcTemplateWithPostgreSqlDao") PersonDAO personDAO) {
         this.personDAO = personDAO;
     }
 
@@ -77,6 +77,5 @@ public class PeopleController {
         personDAO.delete(id);
         return "redirect:/people";
     }
-
 
 }

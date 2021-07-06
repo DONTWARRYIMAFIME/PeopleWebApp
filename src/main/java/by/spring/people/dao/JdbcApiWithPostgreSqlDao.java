@@ -10,7 +10,7 @@ import java.util.List;
 
 @Component
 //@PropertySource("classpath:musicPlayer.properties")
-public class PostgreSQLDAO implements PersonDAO {
+public class JdbcApiWithPostgreSqlDao implements PersonDAO {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/first_db";
     private static final String USERNAME = "postgres";
